@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+      body{
+    background: hsla(220, 78%, 29%, 1);
+    background: linear-gradient(90deg, hsla(220, 78%, 29%, 1) 0%, hsla(221, 45%, 73%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(220, 78%, 29%, 1) 0%, hsla(221, 45%, 73%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(220, 78%, 29%, 1) 0%, hsla(221, 45%, 73%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#103783", endColorstr="#9BAFD9", GradientType=1 );
+    height: 100vh;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    width: auto;
+    border-radius: 20px;
+}
+h1{
+    margin-bottom: 50px;
+    margin-top: 25px;
+    text-align: center;
+    border: 2px black solid;
+}
+.form-text{
+    color: black;
+}
+    </style>
+    <title>Registration Form</title>
+</head>
+<body>
+    
+    <div class="main container mt-5 shadow-lg">
+        <h2>Registration Form</h2>
+        <form action="/regdata" method="POST">
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" name="username">
+          </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" name="email" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="password1" class="form-label">Password</label>
+              <input type="password" class="form-control" name="password">
+            </div>
+            <div class="mb-3">
+              <label for="password2" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" name="cpassword">
+            </div>
+            <div class="mb-3">
+              <label for="phoneNum" class="form-label">Phone Number</label>
+              <input type="text" class="form-control" name="phoneNum">
+            </div>
+            <div class="message"></div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+</body>
+</html>
