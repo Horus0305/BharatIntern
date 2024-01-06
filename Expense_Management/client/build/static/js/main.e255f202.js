@@ -55049,7 +55049,7 @@
         },
         CO = xO,
         EO = function (e) {
-          var t = e.allTransection,
+          var t = e.alltransaction,
             n = [
               "salary",
               "tip",
@@ -55289,7 +55289,7 @@
               { title: "Amount", dataIndex: "amount" },
               { title: "Type", dataIndex: "type" },
               { title: "Category", dataIndex: "category" },
-              { title: "Refrence", dataIndex: "refrence" },
+              { title: "Reference", dataIndex: "reference" },
               {
                 title: "Actions",
                 render: function (e, t) {
@@ -55328,7 +55328,7 @@
                                 i(!0),
                                 (e.next = 5),
                                 GN.post(
-                                  "/api/v1/transections/get-transection",
+                                  "/api/v1/transactions/get-transaction",
                                   {
                                     userid: t._id,
                                     frequency: f,
@@ -55343,7 +55343,7 @@
                             case 10:
                               (e.prev = 10),
                                 (e.t0 = e.catch(0)),
-                                If.error("Ftech Issue With Tranction");
+                                If.error("Fetch Issue With Transaction");
                             case 13:
                             case "end":
                               return e.stop();
@@ -55376,7 +55376,7 @@
                               i(!0),
                               (e.next = 4),
                               GN.post(
-                                "/api/v1/transections/delete-transection",
+                                "/api/v1/transactions/delete-transaction",
                                 { transacationId: t._id }
                               )
                             );
@@ -55426,7 +55426,7 @@
                             }
                             return (
                               (e.next = 6),
-                              GN.post("/api/v1/transections/edit-transection", {
+                              GN.post("/api/v1/transactions/edit-transaction", {
                                 payload: Ie(Ie({}, t), {}, { userId: n._id }),
                                 transacationId: k._id,
                               })
@@ -55440,7 +55440,7 @@
                             return (
                               (e.next = 12),
                               GN.post(
-                                "/api/v1/transections/add-transection",
+                                "/api/v1/transactions/add-transaction",
                                 Ie(Ie({}, t), {}, { userid: n._id })
                               )
                             );
@@ -55574,10 +55574,10 @@
                 children:
                   "table" === w
                     ? (0, Zk.jsx)(QC, { columns: N, dataSource: c })
-                    : (0, Zk.jsx)(EO, { allTransection: c }),
+                    : (0, Zk.jsx)(EO, { alltransaction: c }),
               }),
               (0, Zk.jsx)(GE, {
-                title: k ? "Edit Transaction" : "Add Transection",
+                title: k ? "Edit Transaction" : "Add Transaction",
                 open: n,
                 onCancel: function () {
                   return r(!1);
@@ -55659,8 +55659,8 @@
                       children: (0, Zk.jsx)(cC, { type: "date" }),
                     }),
                     (0, Zk.jsx)(Vk.Item, {
-                      label: "Refrence",
-                      name: "refrence",
+                      label: "Reference",
+                      name: "reference",
                       children: (0, Zk.jsx)(cC, { type: "text", required: !0 }),
                     }),
                     (0, Zk.jsx)(Vk.Item, {
